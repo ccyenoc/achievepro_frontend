@@ -4,6 +4,7 @@ import DashboardCards from "../components/4x1_cards_layout";
 import PageTitle from "../components/page_title";
 import SearchFilterKPI from "../components/search_filter_kpi"
 import KPIAssignedListCard from "../components/kpi_assigned_list";
+import { NavLink } from "react-router-dom";
 
 function KPIManagement(){
      const temp_data = [
@@ -34,7 +35,6 @@ function KPIManagement(){
             marginLeft: "150px",
             display: "flex",
             flexDirection : "column",
-            
           }}>
         
         <ManagerSidebar />
