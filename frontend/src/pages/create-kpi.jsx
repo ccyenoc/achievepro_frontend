@@ -1,6 +1,6 @@
 import ManagerSidebar from "../components/manager_sidebar"
 import PageTitle from "../components/page_title"
-import InputKPITitle from "../components/input_KPI_tile"
+import InputKPITitle from "../components/input_KPI_title"
 import CategorySelection from "../components/category_selection"
 import { useState} from "react";
 import TargetKPISelection from "../components/target_kpi"
@@ -8,6 +8,14 @@ import Deadline from "../components/deadline"
 import KPIAssignStaff from "../components/kpi_assign_staff"
 
 function CreateKPI(){
+  {/*mock data*/}
+  const staffList = [
+  {
+    id: 1,
+    name: "John Smith",
+    email: "john.smith@company.com"
+  }
+];
     const [category, setCategory] = useState("")
     const [title, setTitle] = useState("")
 
@@ -69,8 +77,8 @@ function CreateKPI(){
                 <TargetKPISelection />
                 <Deadline />
             </div>   
-
-            <KPIAssignStaff />
+            <ManagerSidebar />
+            <KPIAssignStaff staffList={staffList} />
 
              <div 
               style={{ 

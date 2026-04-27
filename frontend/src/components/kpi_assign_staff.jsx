@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-function KPIAssignStaff(){
+function KPIAssignStaff({ staffList, unit }) {
 
     const [kpiValue, setKpiValue] = useState(100)
 
     const gridStyle = {
   display: "grid",
-  gridTemplateColumns: "2fr 1fr 1fr 2fr", // ✅ added 4th column
+  gridTemplateColumns: "2fr 1fr 1fr 2fr",
   alignItems: "center",
   gap: "10px",
   textAlign:"start",
@@ -79,12 +79,22 @@ function KPIAssignStaff(){
   <div style={{ ...gridStyle, padding: "15px 0", borderBottom: "1px solid #eee" }}>
 
   {/* Staff */}
-  <div>
-    <strong>John Smith</strong><br />
-    <span style={{ color: "#666", fontSize: "0.9rem" }}>
-      john.smith@company.com
-    </span>
+  
+    {staffList.map((staff) => (
+  <div
+    key={staff.id}
+  >
+    {/* Staff */}
+    <div>
+      <strong>{staff.name}</strong><br />
+      <span style={{ 
+        color: "#666", 
+        fontSize: "14px" }}>
+        {staff.email}
+      </span>
+    </div>
   </div>
+))}
 
   {/* KPI */}
   <input
