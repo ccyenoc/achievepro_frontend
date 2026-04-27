@@ -29,7 +29,7 @@ function KPISubmissionTable() {
     category: "Marketing",
     submitted_date: "2026-04-18",
     evidence: "Screenshot.png",
-    status: "Pending Verification"
+    status: "Pending"
   }
 ];
 
@@ -61,7 +61,7 @@ function KPISubmissionTable() {
   const statusStyle = (status) => {
   const colors = {
     Approved: "#bbf7d0",       // green
-    "Pending Verification": "#fde68a",       // yellow
+    Pending: "#fde68a",       // yellow
     Rejected: "#fecaca",  // red
   };
 
@@ -74,38 +74,45 @@ function KPISubmissionTable() {
 };
 
   return (
-    <div style={{ marginTop: "20px" }}>
+    <div 
+    style={{ 
+        marginTop: "20px",
+        marginLeft:"20px",
+        padding:"20px",
+        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        borderRadius:"12px",
+        width: "109%", }}>
       
       {/* Header */}
       <div 
         style={headerStyle}>
         <div 
           style={{ 
-            flex: 3 
+            flex: 1.2
             }}>Staff</div>
         <div 
           style={{ 
-            flex: 1 
+            flex: 2.5
         }}>KPI Title</div>
         <div 
           style={{ 
-            flex: 2 
+            flex: 3
             }}>Progress</div>
         <div
          style={{ 
-            flex: 1 
+            flex: 1.5
             }}>Category</div>
         <div 
         style={{ 
-            flex: 1 
+            flex: 1.2
             }}>Submitted</div>
         <div 
         style={{ 
-            flex: 1
+            flex: 1.5
             }}>Evidence</div>
         <div 
         style={{ 
-            flex: 1
+            flex: 1.2
             }}>Status</div>
       </div>
 
@@ -119,7 +126,7 @@ function KPISubmissionTable() {
 
             {/* staff */}
             <div style={{ 
-            flex: 3 
+            flex: 1.2
             }}>
             <div 
             style={{ 
@@ -135,7 +142,7 @@ function KPISubmissionTable() {
 
             {/* title */}
             <div style={{ 
-            flex: 3 
+            flex: 2.5
             }}>
             <div 
             style={{ 
@@ -150,23 +157,30 @@ function KPISubmissionTable() {
           </div>
 
           {/* progress */}
-            <div style={{
-             marginTop: "8px",
-             background: "#e5e7eb",
-             borderRadius: "10px",
-             height: "8px",
-             overflow: "hidden"
-             }}>
-            <div style={{
-              width: `${(item.current / item.target_kpi) * 100}%`,
-              background: "#3b82f6",
-              height: "100%"
-             }} />
-            </div>
-
+           <div style={{
+  flex: 3,
+  display: "flex",
+  alignItems: "center"
+}}>
+  <div style={{
+    width: "100%",       
+    maxWidth: "220px",      
+    background: "#e5e7eb",
+    borderRadius: "10px",
+    height: "8px",
+    overflow: "hidden"
+  }}>
+    <div style={{
+      width: `${(item.current / item.target_kpi) * 100}%`,
+      background: "#3b82f6",
+      height: "100%"
+    }} />
+  </div>
+</div>
             {/* category */}
-            <div style={{ 
-            flex: 3 
+            <div
+            style={{ 
+            flex: 1.5,
             }}>
             <div 
             style={{ 
@@ -176,7 +190,7 @@ function KPISubmissionTable() {
 
           {/* submitted date */}
             <div style={{ 
-            flex: 3 
+            flex: 1.2
             }}>
             <div 
             style={{ 
@@ -186,7 +200,7 @@ function KPISubmissionTable() {
 
           {/* evidence */}
             <div style={{ 
-            flex: 3 
+            flex: 1.5
             }}>
             <div 
             style={{ 
@@ -196,13 +210,11 @@ function KPISubmissionTable() {
 
           {/* status */}
             <div style={{ 
-            flex: 3 ,
-            ...statusStyle(item.status),
+            flex: 1.2 ,
             }}>
-            <div 
-            style={{ 
-              fontWeight: "500" 
-              }}>{item.status}</div>
+             <span style={statusStyle(item.status)}>
+               {item.status}
+             </span>
           </div>
 
 

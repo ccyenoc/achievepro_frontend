@@ -2,6 +2,7 @@ import {user , useState} from "react";
 import ManagerSidebar from"../components/manager_sidebar";
 import PageTitle from "../components/page_title";
 import DashboardCards from "../components/4x1_cards_layout";
+import KPISubmissionTable from "../components/kpi_submission_table";
 
 function VerifyKPI(){
     return (
@@ -23,9 +24,9 @@ function VerifyKPI(){
               alignItems: "center",
           }}>
 
-        <PageTitle
-          title="KPI Management"
-          subtitle="Create, Update and Manage key performance indicators" />
+         <PageTitle
+          title="Verify KPI Submissions"
+          subtitle="Review and approve staff KPI progress" />
 
         </div>
 
@@ -47,6 +48,8 @@ function VerifyKPI(){
          value4="2"
          subtitle4="Needs Improvement"
        />
+
+       <KPISubmissionTable />
 
        </div>
 
