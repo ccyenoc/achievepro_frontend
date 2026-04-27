@@ -52,6 +52,7 @@ function KPIManagement(){
           subtitle="Create, Update and Manage key performance indicators" />
 
 
+        <NavLink to="/create-kpi" style={{ textDecoration: "none" }}>
         <button className="justy-content-center"
          style={{
             width :"120px",
@@ -64,6 +65,7 @@ function KPIManagement(){
             border: "none",     
          }}>+ Create KPI
         </button>
+        </NavLink>
 
         </div>
 

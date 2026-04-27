@@ -4,12 +4,14 @@ function CategorySelection({ }) {
       style={{
         display: "flex",
         flexDirection: "column",
-        marginBottom: "20px"
+        textAlign:"start",
       }}
     >
-      <label style={{ fontWeight: "bold", marginBottom: "6px" }}>
+       <h3 style={{ 
+        fontSize:"16px",
+        fontWeight: "bold" }}>
         Category
-      </label>
+      </h3>
 
       <select
         style={{
@@ -17,15 +19,16 @@ function CategorySelection({ }) {
           borderRadius: "8px",
           border: "1px solid #ccc",
           background: "#fff",
-          cursor: "pointer"
+          cursor: "pointer",
+          fontSize:"14px",
         }}
       >
-        <option value="">Select Unit</option>
-        <option value="RM">RM</option>
-        <option value="%">%</option>
-        <option value="units">units</option>
-        <option value="days">days</option>
-        <option value="months">months</option>
+         <option value="">Select category</option>
+         <option value="sales">Sales Performance</option>
+         <option value="lead">Lead Generation</option>
+         <option value="property">Property Management</option>
+         <option value="marketing">Marketing Performance</option>
+         <option value="customer">Customer Experience</option>
       </select>
     </div>
   )

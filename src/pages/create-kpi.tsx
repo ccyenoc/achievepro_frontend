@@ -20,14 +20,29 @@ function CreateKPI(){
     }
 
     return(
-        <div
+        <div 
           className="d-flex justify-content-center"
           style={{
-            flexDirection:"column",
-            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+            marginLeft: "150px",
+            display: "flex",
+            flexDirection : "column",
           }}>
             <ManagerSidebar/>
             <PageTitle title="Create KPI" subtitle="Create a key performance indicator and assign to a staff"/>
+
+        <div
+           className="d-flex justify-content-center"
+           style={{
+            width : "109%",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              alignItems: "start",
+              borderRadius:"12px",
+              boxShadow: "0 4px 10px rgba(0,0,0,0.05)",
+              padding :"20px",
+              gap:"20px"
+,          }}>
+          
 
             {/*title and category contanier*/}
             <div 
@@ -35,6 +50,7 @@ function CreateKPI(){
               style={{
                 flexDirection:"row",
                 font:"16px",
+                gap:"400px",
               }}>
 
                 <InputKPITitle />
@@ -47,18 +63,7 @@ function CreateKPI(){
               style={{
                 flexDirection:"row",
                 font:"16px",
-              }}>
-
-                <TargetKPISelection />
-                <Deadline />
-            </div>   
-
-             {/* assign staff contanier*/}
-            <div 
-              className="d-flex"
-              style={{
-                flexDirection:"row",
-                font:"16px",
+                gap:"260px",
               }}>
 
                 <TargetKPISelection />
@@ -66,7 +71,33 @@ function CreateKPI(){
             </div>   
 
             <KPIAssignStaff />
+
+             <div 
+              style={{ 
+                display: "flex", 
+                justifyContent: "flex-end",
+                marginTop: "20px",}}>
+                <button
+                 style={{
+                  width: "100%",         
+                   backgroundColor: "#2b4cb3",
+                   color: "#fff",
+                   padding: "10px 20px",
+                   border: "none",
+                   borderRadius: "10px",
+                   fontSize: "14px",
+                   cursor: "pointer"}}>
+                  Confirm</button>
+              </div>
+
+
         </div>
+
+  
+      
+        </div>
+
+        
     )
 }
 

@@ -2,18 +2,20 @@ function InputKPITitle() {
   return (
     <div
       style={{
-        marginBottom: "20px"
+        textAlign: "start"
       }}
     >
-      <label style={{ fontWeight: "bold" }}>KPI Title</label>
+      <h3 style={{ 
+        fontSize:"16px",
+        fontWeight: "bold" }}>KPI Title</h3>
 
       <input
         type="text"
         placeholder="Enter KPI title"
         style={{
           width: "100%",
+          fontSize:"14px",
           padding: "10px",
-          marginTop: "6px",
           borderRadius: "8px",
           border: "1px solid #ccc"
         }}

@@ -1,3 +1,5 @@
+import { useState, useRef } from "react";
+
 function Deadline(){
     const box = {
   padding: "10px 16px",
@@ -6,8 +8,21 @@ function Deadline(){
   cursor: "pointer",
   background: "#fff",
   minWidth: "60px",
+  fontSize:"14px",
   textAlign: "center"
 }
+
+const [date, setDate] = useState("");
+  const inputRef = useRef(null);
+
+const openPicker = () => {
+    inputRef.current?.showPicker?.();
+    inputRef.current?.focus();
+  };
+
+  const [year, month, day] = date
+    ? date.split("-")
+    : ["YYYY", "MM", "DD"];
 
   return(
      <div
@@ -16,7 +31,10 @@ function Deadline(){
          flexDirection:"column"
        }}>
 
-        <h3>Deadline</h3>
+         <h3 style={{ 
+        fontSize:"16px",
+        fontWeight: "bold",
+        textAlign:"start", }}>Deadline</h3>
         <div
         className="d-flex"
         style={{
@@ -38,7 +56,9 @@ function Deadline(){
         type="date"
         value={date}
         onChange={(e) => setDate(e.target.value)}
-        style={{ display: "none" }}
+        style={{ 
+          fontSize:"14px",
+          display: "none" }}
       />
 
 
