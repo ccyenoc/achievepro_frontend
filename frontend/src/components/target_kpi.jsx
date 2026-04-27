@@ -7,25 +7,29 @@ function TargetKPISelection(){
             flexDirection:"column"
          }}>
 
-            <h3>Target KPI</h3>
+             <h3 style={{ 
+        fontSize:"16px",
+        fontWeight: "bold",
+        textAlign:"start" }}>Target KPI</h3>
 
             {/*kpi and unit*/}
             <div
               className="d-flex"
               style={{
-                flexDirection:"row"
+                flexDirection:"row",
+                fontSize:"14px",
+                gap:"30px",
               }}>
-                <input>
+                <input
                  type="text"
                  placeholder="Enter KPI"
                  style={{
                    width: "100%",
                    padding: "10px",
-                   marginTop: "6px",
                    borderRadius: "8px",
                    border: "1px solid #ccc"
                 }}
-                </input>
+                />
 
                 <select
                  style={{
@@ -33,14 +37,17 @@ function TargetKPISelection(){
                   borderRadius: "8px",
                   border: "1px solid #ccc",
                   background: "#fff",
-                  cursor: "pointer"
+                  cursor: "pointer",
+                  fontSize:"14px",
                  }}>
-                  <option value="">Select category</option>
-                  <option value="sales">Sales Performance</option>
-                  <option value="lead">Lead Generation</option>
-                  <option value="property">Property Management</option>
-                  <option value="marketing">Marketing Performance</option>
-                  <option value="customer">Customer Experience</option>
+
+                   <option value="">Select Unit</option>
+                   <option value="RM">RM</option>
+                   <option value="%">%</option>
+                   <option value="units">units</option>
+                   <option value="days">days</option>
+                   <option value="months">months</option>
+            
                 </select>
             </div>
          </div>
