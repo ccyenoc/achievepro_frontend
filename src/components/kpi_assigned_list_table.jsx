@@ -1,4 +1,8 @@
+import {useNavigate} from "react-router-dom"
+import KPIProgressPage from "../pages/kpi-progress";
+
 function KPIAssignedListTable({data}) {
+  const navigate = useNavigate();
 
   const headerStyle = {
     display: "flex",
@@ -57,7 +61,13 @@ function KPIAssignedListTable({data}) {
 
       {/* Rows */}
       {data.map((item, index) => (
-        <div key={index} style={rowStyle}>
+        <div 
+        key={index} 
+        style={{
+    ...rowStyle,
+    cursor: "pointer"
+  }}
+        onClick={() => navigate("/kpi-progress", { state: item })}>
           
           {/* Title */}
           <div style={{ flex: 3 }}>
