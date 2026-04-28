@@ -2,6 +2,7 @@ import {useNavigate} from "react-router-dom"
 import KPIProgressPage from "../pages/kpi-progress";
 
 function KPISubmissionTable() {
+  const navigate = useNavigate();
 
  {/*mock data*/}
  const data = [
@@ -122,7 +123,8 @@ function KPISubmissionTable() {
         {data.map(item => (
             <div 
             style={rowStyle}
-            key={item.id}>
+            key={item.id}
+            onClick={() => navigate("/verify-kpi", { state: item })}>
 
             {/* staff */}
             <div style={{ 
