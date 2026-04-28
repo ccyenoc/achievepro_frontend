@@ -5,12 +5,14 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  ResponsiveContainer
+  ResponsiveContainer,
+  Legend
 } from "recharts";
 
 function ProgressKPIGraph({ data }) {
   return (
-    <div style={{ marginTop: "20px" }}>
+    <div style={{ 
+      marginTop: "20px",}}>
 
       <h3 style={{ fontSize: "16px", fontWeight: "bold" }}>
         KPI Progress Over Time
@@ -19,7 +21,11 @@ function ProgressKPIGraph({ data }) {
         Track performance trends
       </p>
 
-      <div style={{ width: "100%", height: "300px" }}>
+      <div 
+      style={{ 
+        width: "900px", 
+        maxWidth:"900px",
+        height: "300px" }}>
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data}>
             
@@ -46,6 +52,7 @@ function ProgressKPIGraph({ data }) {
               strokeWidth={2}
               strokeDasharray="5 5"
             />
+            <Legend />
 
           </LineChart>
         </ResponsiveContainer>

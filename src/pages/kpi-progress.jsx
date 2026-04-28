@@ -20,6 +20,7 @@ function KPIProgressPage(){
         style={{
             flexDirection:"column",
             marginLeft:"150px",
+            marginBottom:"20px",
         }}>
 
             <ManagerSidebar />
@@ -95,7 +96,7 @@ function KPIProgressPage(){
                 marginTop:"40px",
             }}>
 
-{/*mock data*/}
+                {/*mock data*/}
                 <ProgressKPIAssignStaff  
                 staffProgress={[
                     {

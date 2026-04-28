@@ -88,14 +88,18 @@ function CreateKPI(){
             </div>   
             <KPIAssignStaff staffList={staffList} />
 
-             <div 
-              style={{ 
-                display: "flex", 
-                justifyContent: "flex-end",
-                marginTop: "20px",}}>
+            <div
+                className="d-flex"
+                style={{
+  marginTop: "20px",
+  display: "flex",
+  justifyContent: "center", // ✅ horizontal center
+  alignItems: "center",     // ✅ vertical center
+  gap: "50px"
+}}>
                 <button
                  style={{
-                  width: "100%",         
+                   width:"200px",      
                    backgroundColor: "#2b4cb3",
                    color: "#fff",
                    padding: "10px 20px",

@@ -113,7 +113,6 @@ const h3ContentStyle={
               flexDirection: "column",
               justifyContent: "space-between",
               alignItems: "start",
-              borderRadius:"12px",
               padding :"20px",
               gap:"20px"
 ,          }}>
