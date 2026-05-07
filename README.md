@@ -25,5 +25,3 @@ This application enables managers and staff to monitor performance, assign KPIs,
 - **React Router** (Navigation)  
 
 ---
-
-## 📁 Project Structure
